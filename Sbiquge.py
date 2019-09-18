@@ -18,7 +18,7 @@ def get_first_page(url):
 def get_urls(html):
     firstPattern=re.compile('正文卷</dt>.*</dl>',re.S)
     firstItem=re.findall(firstPattern,html)
-    secondPattern=re.compile('href="(.*?)">',re.S)
+    secondPattern=re.compile('href ="(.*?)">',re.S)
     items=re.findall(secondPattern,firstItem[0])
     return items
 
